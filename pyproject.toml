@@ -14,7 +14,7 @@ dependencies = [
   "requests==2.34.2",
   "pydantic==2.13.4",
   "httpx==0.28.1",
-  "fastmcp==3.4.4",
+  "fastmcp==3.4.6",
 ]
 
 [project.scripts]
