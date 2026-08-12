@@ -388,7 +388,9 @@ def build_mcp_server(*, local: bool = False) -> FastMCP | None:
         website_url=None if local else settings.mcp_base_url,
         auth=auth_provider,
         instructions=(
-            "Partuno is an open-source, provider-neutral MCP server. Use DigiKey and Mouser "
+            "Partuno is an open-source, provider-neutral DigiKey and Mouser MCP server for "
+            "electronic component research, BOM analysis, sourcing comparison, and safe "
+            "distributor workflows. Use DigiKey and Mouser "
             "for authoritative component research, live inventory, "
             "pricing, and exact offer comparison. Ask for missing critical engineering "
             "requirements before recommending a component, and distinguish suitability "

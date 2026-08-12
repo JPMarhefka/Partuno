@@ -1,0 +1,66 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.JPMarhefka/partuno",
+  "title": "Partuno — DigiKey & Mouser MCP Server",
+  "description": "DigiKey and Mouser MCP server for component research, BOM analysis, and sourcing.",
+  "repository": {
+    "id": "1331637101",
+    "url": "https://github.com/JPMarhefka/Partuno",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/JPMarhefka/Partuno",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/JPMarhefka/Partuno/main/docs/assets/partuno-plugin-icon.png",
+      "mimeType": "image/png",
+      "sizes": ["any"]
+    }
+  ],
+  "version": "4.0.0",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "partuno",
+      "version": "4.0.0",
+      "runtimeHint": "uvx",
+      "packageArguments": [
+        {
+          "type": "positional",
+          "value": "partuno-mcp",
+          "isRequired": true
+        }
+      ],
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "DIGIKEY_ACCESS_TOKEN",
+          "description": "Optional DigiKey bearer token for local mode.",
+          "isSecret": true
+        },
+        {
+          "name": "DIGIKEY_CLIENT_ID",
+          "description": "DigiKey OAuth client ID for the operator's integration.",
+          "isSecret": true
+        },
+        {
+          "name": "DIGIKEY_CLIENT_SECRET",
+          "description": "DigiKey OAuth client secret for the operator's integration.",
+          "isSecret": true
+        },
+        {
+          "name": "MOUSER_SEARCH_API_KEY",
+          "description": "Optional Mouser Search API key for catalog workflows.",
+          "isSecret": true
+        },
+        {
+          "name": "MOUSER_ACCOUNT_API_KEY",
+          "description": "Optional Mouser Account API key for order-history and Cart workflows.",
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

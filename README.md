@@ -1,4 +1,4 @@
-# Partuno
+# Partuno — DigiKey & Mouser MCP Server
 
 <p align="center">
   <img src="docs/assets/partuno-logo.png" alt="Partuno logo" width="144">
@@ -8,13 +8,16 @@
 [![License](https://img.shields.io/github/license/JPMarhefka/partuno)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.12%2B-3776AB)](https://www.python.org/)
 
+<!-- mcp-name: io.github.JPMarhefka/partuno -->
+
 ## Local-first component intelligence for MCP
 
-Partuno is an open-source Model Context Protocol (MCP) server for electronic
-component research, BOM analysis, sourcing comparisons, and carefully bounded
-distributor workflows. It connects AI assistants to operator-owned DigiKey and
-Mouser credentials while returning evidence, normalized attributes, and
-explicit uncertainty.
+Partuno is an open-source, provider-neutral, local-first Model Context Protocol
+(MCP) server for electronic component research, BOM analysis, sourcing
+comparison, and safe distributor workflows. Connect an AI assistant to your
+own DigiKey and Mouser credentials without shared credentials or autonomous
+ordering, while keeping evidence, normalized attributes, and explicit
+uncertainty visible.
 
 Partuno was initially developed as a native MCP server. Native MCP is the
 recommended connection because it works as an app in ordinary ChatGPT
@@ -45,6 +48,14 @@ python -m partuno
 
 Then configure your MCP client to launch `python -m partuno` from the checkout.
 See [MCP setup](MCP_SETUP.md) and the [local deployment guide](docs/deployment/local.md).
+For a hosted directory listing, see [Partuno on Glama](https://glama.ai/mcp/servers/JPMarhefka/partuno).
+
+After the `partuno` PyPI package is published, the equivalent package-based
+launcher is:
+
+```bash
+uvx --from partuno partuno-mcp
+```
 
 ### Self-host a remote MCP server
 
@@ -78,6 +89,46 @@ The Action setup details are documented in [MCP setup](MCP_SETUP.md).
 
 See the [capability reference](docs/capabilities.md) for the current scope and
 the safety boundary for each workflow.
+
+## DigiKey MCP server
+
+Partuno can run as a local-first DigiKey MCP server for component search,
+product research, current pricing and availability, lifecycle checks, MyLists,
+quotes, receiving reconciliation, and other bounded account workflows. The
+[DigiKey MCP server guide](docs/guides/digikey-mcp-server.md) covers setup,
+supported workflows, and the provider-specific safety boundaries.
+
+## Mouser MCP server
+
+Partuno also provides a Mouser MCP server surface for catalog search, exact
+offer comparison, read-only order history, and preview-confirmed Cart
+workflows. The [Mouser MCP server guide](docs/guides/mouser-mcp-server.md)
+explains the separate operator-owned Mouser credentials and what the server
+does and does not execute.
+
+## Electronics BOM MCP server
+
+Use Partuno as an electronics BOM MCP server to consolidate duplicate rows,
+resolve exact products, estimate current merchandise cost, check stock and
+lifecycle risk, inspect compliance and lead-time signals, and find substitutes
+or alternate packaging. See the [electronics BOM MCP server guide](docs/guides/electronics-bom-mcp.md)
+for a complete read-only example and known limitations.
+
+## AI component sourcing
+
+Partuno turns a natural-language engineering request into a traceable sourcing
+workflow. Recommendations preserve `meets`, `does_not_meet`, and `unknown`
+evidence states, so missing or ambiguous attributes are not silently treated as
+qualified requirements. The [natural-language examples](docs/examples/README.md)
+show the intended interaction style.
+
+## DigiKey vs Mouser comparison
+
+For an exact comparison, Partuno matches manufacturer and MPN identity first,
+then compares requested-quantity pricing, minimum order quantity, order
+multiples, purchasable quantity, availability, and manufacturer lead time. If a
+provider fails or returns incomplete evidence, the result remains partial
+instead of inventing a winner. See the [DigiKey vs Mouser comparison guide](docs/guides/mouser-mcp-server.md#compare-exact-offers-across-digikey-and-mouser).
 
 ## What Partuno does not do
 
@@ -130,6 +181,7 @@ product research, BOM review, and safe account-preview workflows.
 | Security and credential handling | [Security guide](docs/security.md) |
 | Offline and live validation | [Testing guide](docs/testing.md) and [validation notes](VALIDATION.md) |
 | Natural-language usage examples | [Examples](docs/examples/README.md) |
+| DigiKey, Mouser, and BOM entry points | [Search-focused guides](docs/guides/README.md) |
 | Contributing | [CONTRIBUTING.md](CONTRIBUTING.md) |
 | Security reports | [SECURITY.md](SECURITY.md) |
 | Release history | [CHANGELOG.md](CHANGELOG.md) |
