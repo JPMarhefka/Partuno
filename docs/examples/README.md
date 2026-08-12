@@ -125,27 +125,6 @@ If it is published later, record the same workflow from a natural-language
 request such as: “Find three in-stock, RoHS-compliant LM358-family options for
 a 3.3 V design, show the key evidence and quantity-10 availability, and do not
 place an order.”
-
-## Media notes
-
-The public GIFs are roughly 10–15-second prompt-to-result captures; the
-original full-length MOV recordings remain outside the repository. The stills
-and GIFs are sanitized derivatives of live captures made August 11–12, 2026.
-Inventory, pricing, and lead-time values are illustrative and may change.
-
-## Suggested recording layout
-
-For the README, use the first example as the featured story. A short
-sanitized recording can show the prompt, the tool activity, and the final
-recommendation. Additional recordings can be stored under `docs/assets/demos/` with
-names such as:
-
-- `featured-recommendation.gif`
-- `exact-offer-comparison.gif`
-- `product-research.gif`
-- `bom-risk-review.gif`
-- `safety-preview.gif`
-
 Keep original MP4 or MOV files outside the repository unless they are also
 sanitized and intentionally published. Never include credentials, OAuth
 codes, bearer tokens, private URLs, customer data, or reusable mutation
