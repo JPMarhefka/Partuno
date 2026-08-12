@@ -11,11 +11,12 @@ This directory contains reusable branding and demonstration assets.
   - `product-research.gif` and its response still.
   - `bom-risk-review.gif` and its two response stills.
 
-The GIFs are shortened prompt-to-result captures that preserve the natural-
-language prompt and the response scroll while removing the screen-recording
-HUD. The original full-length MOV recordings remain outside the repository.
-The captures were made August 11–12, 2026; provider inventory, pricing, and
-lead-time values can change.
+The GIFs are roughly 10–15-second prompt-to-result captures that preserve the
+natural-language prompt and use additional source-derived frames for a smooth
+response scroll while removing the screen-recording HUD. The original
+full-length MOV recordings remain outside the repository. The captures were
+made August 11–12, 2026; provider inventory, pricing, and lead-time values can
+change.
 
 The Catalog search capture is retained locally as a technical validation asset
 because its current prompt is tool/JSON-oriented rather than a representative

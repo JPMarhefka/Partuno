@@ -128,10 +128,10 @@ place an order.”
 
 ## Media notes
 
-The public GIFs are shortened prompt-to-result captures; the original full
-length MOV recordings remain outside the repository. The stills and GIFs are
-sanitized derivatives of live captures made August 11–12, 2026. Inventory,
-pricing, and lead-time values are illustrative and may change.
+The public GIFs are roughly 10–15-second prompt-to-result captures; the
+original full-length MOV recordings remain outside the repository. The stills
+and GIFs are sanitized derivatives of live captures made August 11–12, 2026.
+Inventory, pricing, and lead-time values are illustrative and may change.
 
 ## Suggested recording layout
 
