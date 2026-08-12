@@ -20,6 +20,17 @@ This is the recommended featured example. It demonstrates cross-provider
 search, attribute normalization, hard-requirement evaluation, explicit
 uncertainty, quantity-aware offers, and the Pareto shortlist.
 
+![Featured component recommendation demo](../assets/demos/featured-recommendation.gif)
+
+<details>
+<summary>View response screenshots</summary>
+
+![Recommendation evidence](../assets/demos/featured-recommendation-evidence.png)
+
+![Recommendation table](../assets/demos/featured-recommendation-table.png)
+
+</details>
+
 ## 2. Compare exact offers across distributors
 
 ```text
@@ -33,6 +44,15 @@ This demonstrates strict manufacturer-and-MPN identity, purchasable quantity,
 price-break handling, partial provider status, and the difference between a
 tie and a false winner.
 
+![Exact offer comparison demo](../assets/demos/exact-offer-comparison.gif)
+
+<details>
+<summary>View response screenshot</summary>
+
+![Exact offer comparison response](../assets/demos/exact-offer-comparison.png)
+
+</details>
+
 ## 3. Research one component deeply
 
 ```text
@@ -44,6 +64,15 @@ not be verified.
 
 This shows the lean product-research path plus opt-in enrichment while keeping
 partial enrichment failures visible.
+
+![Product research demo](../assets/demos/product-research.gif)
+
+<details>
+<summary>View response screenshot</summary>
+
+![Product research response](../assets/demos/product-research.png)
+
+</details>
 
 ## 4. Review a small BOM for sourcing risk
 
@@ -61,6 +90,17 @@ or purchasing data.
 This demonstrates BOM-level stock, lifecycle, compliance, pricing, lead-time,
 substitute, and packaging analysis.
 
+![BOM sourcing-risk review demo](../assets/demos/bom-risk-review.gif)
+
+<details>
+<summary>View response screenshots</summary>
+
+![BOM risk overview](../assets/demos/bom-risk-overview.png)
+
+![BOM risk assessment](../assets/demos/bom-risk-assessment.png)
+
+</details>
+
 ## 5. Preview an account change without applying it
 
 ```text
@@ -73,11 +113,31 @@ This demonstrates the safety boundary: read-only inspection and a proposed
 diff can be shown without executing a mutation. Redact list IDs, account IDs,
 customer references, and private project names before publishing a recording.
 
+## Catalog search and technical validation
+
+The Catalog search capture is intentionally kept out of the main public
+showcase for now. Its current prompt explicitly names tool calls and JSON-style
+filters, so it demonstrates protocol-level testing more than the ordinary
+plain-English user experience. The local capture remains useful for technical
+smoke testing.
+
+If it is published later, record the same workflow from a natural-language
+request such as: “Find three in-stock, RoHS-compliant LM358-family options for
+a 3.3 V design, show the key evidence and quantity-10 availability, and do not
+place an order.”
+
+## Media notes
+
+The public GIFs are shortened prompt-to-result captures; the original full
+length MOV recordings remain outside the repository. The stills and GIFs are
+sanitized derivatives of live captures made August 11–12, 2026. Inventory,
+pricing, and lead-time values are illustrative and may change.
+
 ## Suggested recording layout
 
 For the README, use the first example as the featured story. A short
 sanitized recording can show the prompt, the tool activity, and the final
-recommendation. Additional recordings can be stored under `docs/assets/` with
+recommendation. Additional recordings can be stored under `docs/assets/demos/` with
 names such as:
 
 - `featured-recommendation.gif`

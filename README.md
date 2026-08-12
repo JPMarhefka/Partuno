@@ -106,6 +106,14 @@ compliance evidence; cross-distributor availability; quantity pricing; and a
 Pareto shortlist. It does not silently treat missing specifications as a
 pass.
 
+<p align="center">
+  <img src="docs/assets/demos/featured-recommendation.gif" alt="Partuno turning a plain-language component request into an evidence-backed recommendation" width="900">
+</p>
+
+This is a shortened prompt-to-result capture that shows the request and the
+response scroll. Prices, stock, and lead times are live provider data and can
+change.
+
 See [more natural-language examples](docs/examples/README.md) for comparison,
 product research, BOM review, and safe account-preview workflows.
 
