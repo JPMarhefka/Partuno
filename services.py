@@ -2646,8 +2646,11 @@ def sync_my_list(
                     account_id=request.account_id,
                 )
             )
-        except Exception as exc:
-            errors.append({"stage": "additions", "detail": str(exc)})
+        except Exception:
+            errors.append({
+                "stage": "additions",
+                "detail": "Failed to add one or more parts to the list.",
+            })
             if request.stop_on_error:
                 return {"list_id": list_id, "diff": diff, "applied": applied, "errors": errors}
 
@@ -2674,12 +2677,12 @@ def sync_my_list(
             applied["updates"].append(
                 {"unique_id": update["unique_id"], "response": response.public()}
             )
-        except Exception as exc:
+        except Exception:
             errors.append(
                 {
                     "stage": "update",
                     "unique_id": update["unique_id"],
-                    "detail": str(exc),
+                    "detail": "Failed to update this list part.",
                 }
             )
             if request.stop_on_error:
@@ -2696,12 +2699,12 @@ def sync_my_list(
             applied["removals"].append(
                 {"unique_id": removal["unique_id"], "response": response.public()}
             )
-        except Exception as exc:
+        except Exception:
             errors.append(
                 {
                     "stage": "removal",
                     "unique_id": removal["unique_id"],
-                    "detail": str(exc),
+                    "detail": "Failed to remove this list part.",
                 }
             )
             if request.stop_on_error:
