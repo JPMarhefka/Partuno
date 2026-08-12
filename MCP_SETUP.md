@@ -58,7 +58,7 @@ Expected result:
 ```json
 {
   "status": "ok",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "mcp": {
     "enabled": true,
     "url": "https://YOUR-SERVICE.onrender.com/mcp",

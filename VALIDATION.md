@@ -13,7 +13,7 @@ contracts, cross-distributor normalization, and Cart confirmation safety.
 
 ```json
 {
-  "version": "4.0.0",
+  "version": "4.0.1",
   "full_paths": 45,
   "full_operations": 52,
   "compact_paths": 34,

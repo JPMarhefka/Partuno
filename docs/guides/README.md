@@ -4,8 +4,16 @@ These are practical entry points for people looking for a DigiKey MCP server,
 Mouser MCP server, electronics BOM MCP server, or AI component-sourcing tool.
 Each guide includes setup, a public demo, supported workflows, and limitations.
 
-When Partuno's website is published, use these guides as the source content for
-the following descriptive routes:
+Partuno is published on [PyPI](https://pypi.org/project/partuno/) and listed in
+the [official MCP Registry](https://registry.modelcontextprotocol.io/). For
+normal local use, launch it with:
+
+```bash
+uvx --from partuno partuno-mcp
+```
+
+When Partuno's website is published, these guides can also be adapted into the
+following descriptive routes:
 
 - [`/digikey-mcp-server/`](digikey-mcp-server.md)
 - [`/mouser-mcp-server/`](mouser-mcp-server.md)

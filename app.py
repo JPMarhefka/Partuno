@@ -30,7 +30,7 @@ def mcp_health() -> dict[str, Any]:
     )
     return {
         "status": "ok" if mcp_active else "disabled",
-        "version": "4.0.0",
+        "version": "4.0.1",
         "mcp": {
             "enabled": mcp_active,
             "url": mcp_url,

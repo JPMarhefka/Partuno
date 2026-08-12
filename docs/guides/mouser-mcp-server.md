@@ -24,22 +24,18 @@ Use Partuno to:
 
 ## Setup
 
-Start with the [native MCP setup guide](../../MCP_SETUP.md). For a local
-deployment, install Partuno and configure the operator-owned Mouser keys in the
-environment alongside the DigiKey settings:
+For a local deployment, launch the published package and configure the
+operator-owned Mouser keys in the environment alongside the DigiKey settings:
 
 ```bash
-git clone https://github.com/JPMarhefka/partuno.git
-cd partuno
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
-cp .env.example .env
-python -m partuno
+uvx --from partuno partuno-mcp
 ```
 
 Mouser Search and Account API keys remain separate. They are read from the
 deployment configuration and are never supplied as MCP tool parameters.
+See the [local deployment guide](../deployment/local.md) for the supported
+variables and the [native MCP setup guide](../../MCP_SETUP.md) for
+operator-owned remote deployments.
 
 ## Supported MCP workflows
 
