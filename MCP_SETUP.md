@@ -75,7 +75,7 @@ An unauthenticated request to `/mcp` should return HTTP 401 and advertise OAuth 
 
 1. Open **Settings > Apps > Developer mode > New Plugin**.
 2. Name it `Partuno`.
-3. Set the description to `Open-source MCP server for electronic component research, BOM analysis, sourcing optimization, and safe distributor workflows.`
+3. Set the description to `Provider-neutral DigiKey and Mouser MCP server for electronic component research, BOM analysis, sourcing comparison, and safe distributor workflows.`
 4. Choose **Server URL**.
 5. Enter `https://YOUR-SERVICE.onrender.com/mcp`.
 6. Choose **OAuth**.

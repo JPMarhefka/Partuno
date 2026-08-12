@@ -109,8 +109,9 @@ app = FastAPI(
     title="Partuno",
     version="4.0.0",
     description=(
-        "Open-source MCP server for electronic component research, BOM analysis, "
-        "sourcing optimization, and safe distributor workflows. "
+        "Open-source MCP server for DigiKey and Mouser electronic component research, "
+        "BOM analysis, sourcing comparison, and safe distributor workflows. "
+        "Partuno is provider-neutral and local-first. "
         "Partuno connects to user-authorized DigiKey and Mouser integrations, "
         "supports strict offer comparison and evidence-based component recommendations, "
         "plus DigiKey Product Information V4, "
