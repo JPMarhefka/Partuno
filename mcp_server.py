@@ -384,7 +384,7 @@ def build_mcp_server(*, local: bool = False) -> FastMCP | None:
 
     mcp = FastMCP(
         name="Partuno",
-        version="4.0.0",
+        version="4.0.1",
         website_url=None if local else settings.mcp_base_url,
         auth=auth_provider,
         instructions=(

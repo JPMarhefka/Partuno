@@ -107,7 +107,7 @@ from services import (
 
 app = FastAPI(
     title="Partuno",
-    version="4.0.0",
+    version="4.0.1",
     description=(
         "Open-source MCP server for DigiKey and Mouser electronic component research, "
         "BOM analysis, sourcing comparison, and safe distributor workflows. "

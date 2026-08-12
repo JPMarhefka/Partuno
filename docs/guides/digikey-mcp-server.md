@@ -24,22 +24,18 @@ Use Partuno to:
 
 ## Setup
 
-The default deployment is local MCP over stdio. Credentials remain in the
-operator's environment and no public network port is required:
+The default deployment is local MCP over stdio. Partuno is published on PyPI,
+so the shortest setup is:
 
 ```bash
-git clone https://github.com/JPMarhefka/partuno.git
-cd partuno
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
-cp .env.example .env
-python -m partuno
+uvx --from partuno partuno-mcp
 ```
 
-Then configure the MCP client to launch `python -m partuno` from the checkout.
-See the [native MCP setup guide](../../MCP_SETUP.md) for local and
-operator-owned remote deployments.
+Credentials remain in the operator's environment and no public network port is
+required. See the [local deployment guide](../deployment/local.md) for the
+supported credential variables and the [native MCP setup guide](../../MCP_SETUP.md)
+for operator-owned remote deployments. Use the source-checkout path only when
+contributing or testing unreleased changes.
 
 ## Supported MCP workflows
 

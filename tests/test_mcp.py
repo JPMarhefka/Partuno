@@ -111,10 +111,10 @@ def test_public_metadata_uses_partuno_brand_and_version() -> None:
     schema = app.openapi()
 
     assert app.title == "Partuno"
-    assert app.version == "4.0.0"
+    assert app.version == "4.0.1"
     assert schema["info"]["title"] == "Partuno"
     assert "Open-source MCP server" in schema["info"]["description"]
-    assert mcp_health()["version"] == "4.0.0"
+    assert mcp_health()["version"] == "4.0.1"
 
 
 def test_openapi_operation_ids_are_unique_and_expose_no_ordering_api() -> None:

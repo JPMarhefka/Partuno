@@ -31,10 +31,53 @@ endpoints remain available for backward compatibility, including
 
 ## Start here
 
-### Run the local MCP server
+### Use the published package (recommended)
 
-The default path is local MCP over stdio. Provider credentials remain in your
-environment and the process does not open a public network port.
+Partuno is published on [PyPI](https://pypi.org/project/partuno/) and listed in
+the [official MCP Registry](https://registry.modelcontextprotocol.io/). The
+recommended local MCP launcher is:
+
+```bash
+uvx --from partuno partuno-mcp
+```
+
+This downloads the current published release and runs the default local stdio
+transport. To pin the current release exactly, use:
+
+```bash
+uvx --from 'partuno==4.0.1' partuno-mcp
+```
+
+MCP clients that accept a local command can use `uvx` with these arguments:
+
+```json
+{
+  "command": "uvx",
+  "args": ["--from", "partuno", "partuno-mcp"]
+}
+```
+
+Keep your operator-owned DigiKey and Mouser credentials in the MCP client's
+environment. See the [local deployment guide](docs/deployment/local.md) for
+the supported variables and the [native MCP setup guide](MCP_SETUP.md) for
+operator-owned remote deployments. For a hosted directory listing, see
+[Partuno on Glama](https://glama.ai/mcp/servers/JPMarhefka/partuno).
+
+### Install with pip
+
+If `uvx` is not available, install the published package into an existing
+Python environment:
+
+```bash
+python3 -m pip install partuno
+partuno-mcp
+```
+
+<details>
+<summary><strong>Develop from source</strong></summary>
+
+Use a checkout only when contributing, running unreleased changes, or needing
+the repository's `.env.example` and test suite:
 
 ```bash
 git clone https://github.com/JPMarhefka/partuno.git
@@ -43,19 +86,16 @@ python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 cp .env.example .env
+set -a
+source .env
+set +a
 python -m partuno
 ```
 
-Then configure your MCP client to launch `python -m partuno` from the checkout.
-See [MCP setup](MCP_SETUP.md) and the [local deployment guide](docs/deployment/local.md).
-For a hosted directory listing, see [Partuno on Glama](https://glama.ai/mcp/servers/JPMarhefka/partuno).
+See the [local deployment guide](docs/deployment/local.md) for loopback HTTP
+and source-checkout details.
 
-After the `partuno` PyPI package is published, the equivalent package-based
-launcher is:
-
-```bash
-uvx --from partuno partuno-mcp
-```
+</details>
 
 ### Self-host a remote MCP server
 
@@ -217,7 +257,7 @@ default and does not require Partuno OAuth.
 
 ## Project status
 
-Partuno 4.0.0 is an active open-source release. The test suite covers offline
+Partuno 4.0.1 is an active open-source release. The test suite covers offline
 provider contracts, MCP tool behavior, REST compatibility, credential safety,
 normalization, and the multi-distributor workflows. Live provider calls are
 opt-in because they require operator credentials and are subject to provider

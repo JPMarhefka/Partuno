@@ -1,5 +1,13 @@
 # Changelog
 
+## 4.0.1
+
+- Made the published PyPI package and official MCP Registry the primary local
+  installation path in the README and deployment guides.
+- Added `uvx` and pinned-release examples for stdio and loopback HTTP use.
+- Clarified that source checkout setup is for contributors and unreleased
+  changes, while preserving the operator-owned credential model.
+
 ## 4.0.0
 
 - Added the local-first MCP launcher, Docker/Compose self-hosting path, and

@@ -42,21 +42,16 @@ previews.
 
 ## Setup
 
-The default path is local MCP over stdio:
+The default path is local MCP over stdio. Partuno is published on PyPI:
 
 ```bash
-git clone https://github.com/JPMarhefka/partuno.git
-cd partuno
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
-cp .env.example .env
-python -m partuno
+uvx --from partuno partuno-mcp
 ```
 
-Configure the MCP client to launch `python -m partuno` from the checkout. The
-[native MCP setup guide](../../MCP_SETUP.md) also covers loopback HTTP and an
-operator-owned remote deployment.
+Configure the MCP client to launch `uvx` with `--from partuno partuno-mcp`.
+The [local deployment guide](../deployment/local.md) covers credential
+variables and loopback HTTP, while the [native MCP setup guide](../../MCP_SETUP.md)
+covers an operator-owned remote deployment.
 
 ## Supported MCP workflows
 
