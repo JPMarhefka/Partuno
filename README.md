@@ -87,20 +87,27 @@ the safety boundary for each workflow.
 - It does not submit distributor orders.
 - It does not bypass provider quotas, terms, authentication, or rate limits.
 
-## Example prompts
+## See it in action
 
-Once the MCP server is connected, try prompts such as:
+### Featured example: choose a component for a 3.3 V design
+
+Once Partuno is connected, a user can simply ask:
 
 ```text
-Find three normally stocked, RoHS-compliant LM358-family parts and show the
-manufacturer MPN, package, voltage range, stock, and source evidence.
-
-Compare the exact onsemi LM358DR2G at a quantity of 10 across DigiKey and
-Mouser. Show each purchasable offer and explain any tie or missing data.
-
-Recommend a dual op amp for a 3.3 V design. Treat supply range and RoHS as
-hard requirements, preserve unknown values as unknown, and show the evidence.
+I’m choosing a dual op amp for a 3.3 V circuit. Find a few LM358-family
+options that can operate at 3.3 V, are RoHS compliant, normally stocked, and
+available in a quantity of 10. Show the evidence behind each recommendation
+and keep uncertain data clearly marked.
 ```
+
+Partuno turns that plain-language request into a provider-aware result with
+qualified, unverified, and rejected candidates; normalized voltage and
+compliance evidence; cross-distributor availability; quantity pricing; and a
+Pareto shortlist. It does not silently treat missing specifications as a
+pass.
+
+See [more natural-language examples](docs/examples/README.md) for comparison,
+product research, BOM review, and safe account-preview workflows.
 
 ## Documentation
 
@@ -114,6 +121,7 @@ hard requirements, preserve unknown values as unknown, and show the evidence.
 | Azure deployment | [Azure deployment](docs/deployment/azure.md) |
 | Security and credential handling | [Security guide](docs/security.md) |
 | Offline and live validation | [Testing guide](docs/testing.md) and [validation notes](VALIDATION.md) |
+| Natural-language usage examples | [Examples](docs/examples/README.md) |
 | Contributing | [CONTRIBUTING.md](CONTRIBUTING.md) |
 | Security reports | [SECURITY.md](SECURITY.md) |
 | Release history | [CHANGELOG.md](CHANGELOG.md) |
