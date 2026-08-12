@@ -4,9 +4,12 @@
   <img src="docs/assets/partuno-logo.png" alt="Partuno logo" width="144">
 </p>
 
-[![CI](https://github.com/JPMarhefka/partuno/actions/workflows/ci.yml/badge.svg)](https://github.com/JPMarhefka/partuno/actions/workflows/ci.yml)
-[![License](https://img.shields.io/github/license/JPMarhefka/partuno)](LICENSE)
-[![Python](https://img.shields.io/badge/python-3.12%2B-3776AB)](https://www.python.org/)
+<p align="center">
+  <a href="https://github.com/JPMarhefka/partuno/actions/workflows/ci.yml"><img src="https://github.com/JPMarhefka/partuno/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/JPMarhefka/partuno" alt="License"></a>
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/python-3.12%2B-3776AB" alt="Python"></a>
+  <a href="https://glama.ai/mcp/servers/JPMarhefka/partuno"><img src="https://glama.ai/mcp/servers/JPMarhefka/partuno/badges/score.svg" alt="partuno MCP server"></a>
+</p>
 
 <!-- mcp-name: io.github.JPMarhefka/partuno -->
 
