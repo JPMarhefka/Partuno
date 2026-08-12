@@ -9,8 +9,7 @@ request, discussion, demo asset, or public log.
 
 Please report security vulnerabilities privately through GitHub's private
 vulnerability-reporting or Security Advisory feature. If private reporting is
-not available, use the maintainer contact method listed on [JP Marhefka's
-project site](https://www.jpmarhefka.com/partuno).
+not available, use the maintainer contact method [email](mailto::contact@jpmarhefka.com).
 
 Do not open a public issue for a suspected credential leak or an exploitable
 security defect. If a credential may have been exposed, revoke or rotate it
