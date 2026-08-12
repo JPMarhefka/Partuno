@@ -1,0 +1,48 @@
+services:
+  - type: web
+    name: partuno-reference
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: PARTUNO_MODE
+        value: remote_single_user
+      - key: DIGIKEY_CLIENT_ID
+        sync: false
+      - key: DIGIKEY_CLIENT_SECRET
+        sync: false
+      - key: MCP_BASE_URL
+        sync: false
+      - key: MCP_JWT_SIGNING_KEY
+        sync: false
+      - key: MOUSER_SEARCH_API_KEY
+        sync: false
+      - key: MOUSER_ACCOUNT_API_KEY
+        sync: false
+      - key: DIGIKEY_API_BASE
+        value: https://api.digikey.com
+      - key: DIGIKEY_SITE
+        value: US
+      - key: DIGIKEY_LANGUAGE
+        value: en
+      - key: DIGIKEY_CURRENCY
+        value: USD
+      - key: SAFE_RETRY_ATTEMPTS
+        value: "4"
+      - key: WORKFLOW_CONCURRENCY
+        value: "6"
+      - key: MAX_BULK_ITEMS
+        value: "30"
+      - key: REFERENCE_CACHE_SECONDS
+        value: "600"
+      - key: PCN_CACHE_SECONDS
+        value: "120"
+      - key: MOUSER_API_BASE
+        value: https://api.mouser.com
+      - key: MOUSER_MINUTE_LIMIT
+        value: "30"
+      - key: MOUSER_DAILY_LIMIT
+        value: "1000"
+      - key: CART_PREVIEW_TTL_SECONDS
+        value: "600"

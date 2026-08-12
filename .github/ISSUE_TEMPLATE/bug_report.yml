@@ -1,0 +1,42 @@
+name: Bug report
+description: Report a reproducible problem with Partuno.
+title: "bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include credentials, tokens, customer data, order numbers, quote IDs, MyList IDs, correlation IDs, or private provider responses. Report security issues through SECURITY.md instead.
+  - type: input
+    id: version
+    attributes:
+      label: Partuno version
+      placeholder: "4.0.0 or commit SHA"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: "macOS 15, Python 3.12, local stdio MCP"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Use synthetic products and account data only.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true

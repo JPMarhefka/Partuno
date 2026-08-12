@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "partuno"
+version = "4.0.0"
+description = "Local-first MCP server for electronic component research and sourcing"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi==0.139.2",
+  "uvicorn[standard]==0.51.0",
+  "requests==2.34.2",
+  "pydantic==2.13.4",
+  "httpx==0.28.1",
+  "fastmcp==3.4.4",
+]
+
+[project.scripts]
+partuno-mcp = "partuno:main"
+
+[tool.setuptools]
+py-modules = [
+  "app",
+  "client",
+  "config",
+  "credentials",
+  "distributor_models",
+  "distributors",
+  "identity",
+  "main",
+  "mcp_server",
+  "models",
+  "mouser_client",
+  "mouser_mcp",
+  "mouser_services",
+  "multi_distributor",
+  "normalization",
+  "partuno",
+  "rest_auth",
+  "services",
+]

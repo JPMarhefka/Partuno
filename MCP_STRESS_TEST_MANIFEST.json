@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "description": "Repeatable read-only MCP pricing checks. Tool arguments must match the registered MCP schemas exactly.",
+  "cases": [
+    {
+      "id": "digikey-current-pricing",
+      "tool": "get_product_pricing",
+      "arguments": {
+        "product_number": "LM358DR2GOSCT-ND",
+        "exclude_tariff": false
+      },
+      "forbidden_arguments": [
+        "requested_quantity"
+      ],
+      "assertions": [
+        {
+          "path": "SettingsUsed.ExcludeTariff",
+          "equals": false
+        },
+        {
+          "path": "_meta.http_status",
+          "equals": 200
+        }
+      ]
+    },
+    {
+      "id": "digikey-quantity-pricing-15",
+      "tool": "get_pricing_by_quantity",
+      "arguments": {
+        "product_number": "LM358DR2GOSCT-ND",
+        "requested_quantity": 15
+      },
+      "assertions": [
+        {
+          "path": "_meta.http_status",
+          "equals": 200
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+.venv
+__pycache__/
+.pytest_cache/
+tests/
+ROAD TO OPENSOURCE/
+*.docx
+*.db
+*.sqlite
+*.sqlite3
+*.log
+logs/
+downloads/
+private-data/

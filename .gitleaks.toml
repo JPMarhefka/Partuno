@@ -1,0 +1,8 @@
+title = "Partuno secret scanning configuration"
+
+[[allowlists]]
+description = "Synthetic DigiKey MPN fixtures used by offline unit tests"
+regexes = [
+  '''LM358DR2G(?:OSCT|OSTR)?-ND''',
+  '''LM358DR2G''',
+]
