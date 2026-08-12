@@ -1,5 +1,9 @@
 # Partuno
 
+<p align="center">
+  <img src="docs/assets/partuno-logo.png" alt="Partuno logo" width="144">
+</p>
+
 [![CI](https://github.com/JPMarhefka/partuno/actions/workflows/ci.yml/badge.svg)](https://github.com/JPMarhefka/partuno/actions/workflows/ci.yml)
 [![License](https://img.shields.io/github/license/JPMarhefka/partuno)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.12%2B-3776AB)](https://www.python.org/)
@@ -110,22 +114,26 @@ hard requirements, preserve unknown values as unknown, and show the evidence.
 | Azure deployment | [Azure deployment](docs/deployment/azure.md) |
 | Security and credential handling | [Security guide](docs/security.md) |
 | Offline and live validation | [Testing guide](docs/testing.md) and [validation notes](VALIDATION.md) |
-| Demo recording and GIF guidance | [Demo media guide](docs/demos.md) |
 | Contributing | [CONTRIBUTING.md](CONTRIBUTING.md) |
 | Security reports | [SECURITY.md](SECURITY.md) |
 | Release history | [CHANGELOG.md](CHANGELOG.md) |
 
-## Demo media
+## Logo assets
 
-The repository includes a small representative preview:
+The [full-resolution Partuno logo](docs/assets/partuno-logo.png) is available
+for project pages, client listings, and integration documentation. A
+[compact plugin icon](docs/assets/partuno-plugin-icon.png) is also included for
+client or plugin upload fields with strict PNG size limits.
 
-![Partuno representative demo](docs/assets/partuno-demo.gif)
+The compact icon is intentionally optimized for small upload limits. If a host
+accepts larger assets, use the full-resolution logo instead. The compact icon
+can also be downloaded directly from the repository's
+[raw asset URL](https://raw.githubusercontent.com/JPMarhefka/partuno/main/docs/assets/partuno-plugin-icon.png).
 
-For a more realistic demonstration, record short clips from your own deployed
-Render instance after redacting credentials, OAuth state, private URLs, account
-identifiers, and customer data. The [demo media guide](docs/demos.md) includes
-recommended clips, Mac capture steps, GIF settings, and privacy checks. Keep
-the original MP4 or MOV alongside a lightweight GIF preview when possible.
+When using the logo in a ChatGPT app, MCP client, or other plugin integration,
+identify the integration as Partuno and do not imply endorsement by DigiKey,
+Mouser, or another provider. Check the host platform's current dimensions,
+format, and file-size requirements before uploading.
 
 ## Deployment and credential model
 
