@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
   "fastapi==0.139.2",
-  "uvicorn[standard]==0.51.0",
+  "uvicorn[standard]==0.52.1",
   "requests==2.34.2",
   "pydantic==2.13.4",
   "httpx==0.28.1",
