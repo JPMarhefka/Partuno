@@ -1,4 +1,4 @@
-# Partuno — DigiKey & Mouser MCP Server
+# Partuno - DigiKey & Mouser MCP Server
 
 <p align="center">
   <img src="docs/assets/partuno-logo.png" alt="Partuno logo" width="144">
