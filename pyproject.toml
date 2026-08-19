@@ -18,7 +18,7 @@ keywords = [
   "component-sourcing",
 ]
 dependencies = [
-  "fastapi==0.139.2",
+  "fastapi==0.141.1",
   "uvicorn[standard]==0.51.0",
   "requests==2.34.2",
   "pydantic==2.13.4",
