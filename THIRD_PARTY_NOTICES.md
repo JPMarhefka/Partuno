@@ -14,7 +14,7 @@ the authoritative license text remains with each package distribution.
 | Requests | 2.34.2 | Apache-2.0 | <https://github.com/psf/requests> |
 | Pydantic | 2.13.4 | MIT | <https://github.com/pydantic/pydantic> |
 | HTTPX | 0.28.1 | BSD-3-Clause | <https://github.com/encode/httpx> |
-| FastMCP | 3.4.4 | Apache-2.0 | <https://github.com/jlowin/fastmcp> |
+| FastMCP | 3.4.7 | Apache-2.0 | <https://github.com/jlowin/fastmcp> |
 
 Transitive dependencies are installed from the pinned dependency set in
 `requirements.txt` and `requirements-dev.txt`. Their package metadata and
